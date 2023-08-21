@@ -1,0 +1,59 @@
+/* Base styles */
+.login_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container-reg {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+ 
+  margin-top: 20px;
+}
+
+.left-text {
+  width: 100%;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.container-form {
+  width: 70%;
+  padding: 20px;
+ 
+  
+  
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+  
+}
+
+/* Media query for tablets and larger screens */
+@media (min-width: 768px) {
+  .login_page {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .left-text {
+    width: 40%;
+    font-size: 28px;
+  }
+
+  .container-reg {
+    width: 40%;
+  }
+}
