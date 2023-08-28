@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginTeacher from "./Components/LoginTeacher";
 import StudentLogin from "./Components/StudentLogin";
 import Aboutus from "./Components/Aboutus";
+import AdminDashboard from "./Components/AdminDashboard";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route exact path='/login-teachers' element={<LoginTeacher/>}></Route>  
       <Route exact path='/login-students' element={<StudentLogin/>}></Route>  
       <Route exact path='/about' element={<Aboutus/>}></Route>  
+      <Route exact path='/admin-dashboard' element={<AdminDashboard/>}></Route>  
 
    
         

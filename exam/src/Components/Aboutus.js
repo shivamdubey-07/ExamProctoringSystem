@@ -15,6 +15,9 @@ function Aboutus() {
       Our platform offers a range of features designed to enhance the
       examination process and make it efficient for everyone involved.
     </p>
+
+
+
     <p>
       Our mission is to empower educators and students by offering advanced
       tools and technologies that simplify the examination process and enable

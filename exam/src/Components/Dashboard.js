@@ -44,6 +44,7 @@ function Dashboard() {
       <div  className="button-container">
       <Link className='login-button-teacher' to='/signup-teachers'>Signup For Teachers</Link>
       <Link  className='login-button-students' to='/login-students'>Login For Students</Link>
+      <Link  className='login-button-students' to='/login-teachers'>Login  For teachers</Link>
 
       </div>
       </div>
