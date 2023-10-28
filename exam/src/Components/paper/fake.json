@@ -1,0 +1,103 @@
+[
+    {
+      "text": "What is the capital of France?",
+      "options": ["Paris", "London", "Berlin", "Madrid"],
+      "correctAnswer": "Paris"
+    },
+    {
+      "text": "Which planet is known as the Red Planet?",
+      "options": ["Earth", "Mars", "Venus", "Jupiter"],
+      "correctAnswer": "Mars"
+    },
+    {
+      "text": "What is the largest mammal on Earth?",
+      "options": ["Elephant", "Blue Whale", "Giraffe", "Lion"],
+      "correctAnswer": "Blue Whale"
+    },
+    {
+      "text": "Which gas do plants absorb from the atmosphere?",
+      "options": ["Oxygen", "Carbon Dioxide", "Hydrogen", "Nitrogen"],
+      "correctAnswer": "Carbon Dioxide"
+    },
+    {
+      "text": "What is the symbol for the chemical element gold?",
+      "options": ["Go", "Ag", "Au", "Ge"],
+      "correctAnswer": "Au"
+    },
+    {
+      "text": "Which gas makes up the majority of Earth's atmosphere?",
+      "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Helium"],
+      "correctAnswer": "Nitrogen"
+    },
+    {
+      "text": "Who wrote 'Romeo and Juliet'?",
+      "options": ["Charles Dickens", "William Shakespeare", "Jane Austen", "F. Scott Fitzgerald"],
+      "correctAnswer": "William Shakespeare"
+    },
+    {
+      "text": "What is the largest organ in the human body?",
+      "options": ["Heart", "Liver", "Lung", "Skin"],
+      "correctAnswer": "Skin"
+    },
+    {
+      "text": "Which country is known as the Land of the Rising Sun?",
+      "options": ["China", "Japan", "South Korea", "Thailand"],
+      "correctAnswer": "Japan"
+    },
+    {
+      "text": "What is the freezing point of water in Fahrenheit?",
+      "options": ["0°F", "32°F", "100°F", "212°F"],
+      "correctAnswer": "32°F"
+    },
+    {
+      "text": "Which of these animals is a marsupial?",
+      "options": ["Kangaroo", "Lion", "Giraffe", "Zebra"],
+      "correctAnswer": "Kangaroo"
+    },
+    {
+      "text": "What is the chemical symbol for water?",
+      "options": ["H2O", "CO2", "O2", "NaCl"],
+      "correctAnswer": "H2O"
+    },
+    {
+      "text": "In which year did Christopher Columbus discover America?",
+      "options": ["1492", "1776", "1620", "1789"],
+      "correctAnswer": "1492"
+    },
+    {
+      "text": "Which gas is responsible for the Earth's ozone layer?",
+      "options": ["Methane", "Carbon Dioxide", "Oxygen", "Ozone"],
+      "correctAnswer": "Ozone"
+    },
+    {
+      "text": "What is the largest planet in our solar system?",
+      "options": ["Earth", "Mars", "Venus", "Jupiter"],
+      "correctAnswer": "Jupiter"
+    },
+    {
+      "text": "Who is the author of 'To Kill a Mockingbird'?",
+      "options": ["George Orwell", "Mark Twain", "Harper Lee", "J.K. Rowling"],
+      "correctAnswer": "Harper Lee"
+    },
+    {
+      "text": "Which gas do plants release during photosynthesis?",
+      "options": ["Oxygen", "Carbon Dioxide", "Hydrogen", "Nitrogen"],
+      "correctAnswer": "Oxygen"
+    },
+    {
+      "text": "What is the largest moon in our solar system?",
+      "options": ["Ganymede", "Luna", "Titan", "Phobos"],
+      "correctAnswer": "Ganymede"
+    },
+    {
+      "text": "What is the largest desert in the world?",
+      "options": ["Sahara Desert", "Gobi Desert", "Antarctica", "Arabian Desert"],
+      "correctAnswer": "Antarctica"
+    },
+    {
+      "text": "Which of the following is not a primary color?",
+      "options": ["Red", "Blue", "Green", "Yellow"],
+      "correctAnswer": "Yellow"
+    }
+  ]
+  

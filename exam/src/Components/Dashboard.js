@@ -1,5 +1,5 @@
 import React from 'react'
-import RegisterTeacher from './RegisterTeacher'
+import RegisterTeacher from "./RegisterTeacher"
 import { Link } from 'react-router-dom'
 import landingImage from "../utility/landing-mg.jpg"
 import Aboutus from './Aboutus'
@@ -22,7 +22,7 @@ function Dashboard() {
     <div className="landing-page">
 
     <div className='image-container'>
-      <img  className='landing_img' src={landingImage} alt="Landing image"/>
+      <img  className='landing_img' src={landingImage} alt="Landing img"/>
 
       <div className="text-overlay">
 
