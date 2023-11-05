@@ -40,20 +40,17 @@
     color: #333;
   }
   
-  /* Options list */
   .options {
     margin-top: 10px;
 list-style: none;
   }
   
-  /* Individual option */
   .option {
     margin: 5px 0;
     font-size: 16px;
     color: #555;
   }
   
-  /* Radio button */
   .option input[type="radio"] {
     margin-right: 10px;
   }

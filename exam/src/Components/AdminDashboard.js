@@ -1,70 +1,57 @@
-import { useState, useEffect } from "react";
-import { useSelector,useDispatch } from "react-redux";
-import { useNavigate } from 'react-router-dom';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import SideBar from "./SideBar";
-import Cookies from 'js-cookie';
 
-import {setuserData} from "../Features/Slices/userDataSlice"
+import { setuserData } from "../Features/Slices/userDataSlice";
+import QuestionList from "./question/QuestionList";
+import { data } from "jquery";
 
 function AdminDashboard() {
   const navigate = useNavigate();
-const dispatch=useDispatch()
-
-  
-
-
-  const callPage=async()=>{
-    try{
-      const res= await fetch("http://localhost:9000/api/admin-dashboard",{
-        method:"GET",
-        headers:{
-          Accept:"application/json",
-          "Content-Type":"application/json"
-
-        },
-        credentials:"include"
-      })
-
-      const data=await res.json();
-      dispatch(setuserData(data.userId))
-            console.log("my data is",data.userId);
-
-      if(res.status=== 401){
-        const error=new Error(res.error)
-        navigate("/login-teachers")
-
-        throw error
-
-      }
-
-    }
-    catch(err){
-        console.log(err);
-        navigate("/login-teachers")
-     
-
-    }
-  }
-  
-
+  const dispatch = useDispatch();
 
   useEffect(() => {
-      callPage();
+    const callPage = async () => {
+      try {
+        const res = await fetch("http://localhost:9000/api/admin-dashboard", {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        });
 
-  },[]); 
+        const data = await res.json();
+        console.log("data here",data)
+        
+        dispatch(setuserData(data.userId));
+        console.log("my data is", data.userId);
+
+        if (res.status === 401) {
+          const error = new Error(res.error);
+          navigate("/login-teachers");
+
+          throw error;
+        }
+      } catch (err) {
+        console.log(err);
+        navigate("/login-teachers");
+      }
+    };
+
+    callPage();
+  });
 
   return (
     <>
       <SideBar />
+      {data.code}
 
-    hellot
-      
- 
-
-    
+      <QuestionList />
     </>
   );
 }
-
 
 export default AdminDashboard;

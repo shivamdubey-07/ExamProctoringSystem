@@ -13,7 +13,7 @@
 
 .image-container {
     position: relative;
-    display: inline-block; /* Make the container fit the image's size */
+    display: inline-block; 
   }
 
 

@@ -1,4 +1,4 @@
-/* Base styles */
+
 .login_page {
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
   margin-top: 20px;
 }
 
-/* Media query for tablets and larger screens */
+
 @media (min-width: 768px) {
   .login_page {
     flex-direction: row;
@@ -62,7 +62,7 @@
 }
 
 .error-message {
-  color: #d9534f; /* Red color */
+  color: #d9534f; 
   font-size: 14px;
   margin-top: 5px;
 }

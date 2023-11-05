@@ -1,0 +1,49 @@
+/* Default styles for larger screens */
+.question-form-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.question-text-input,
+.option-input,
+.correct-answer-select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-option-button,
+.add-question-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .question-form-container {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .question-text-input,
+  .option-input,
+  .correct-answer-select {
+    margin: 5px 0;
+    padding: 5px;
+  }
+
+  .add-option-button,
+  .add-question-button {
+    padding: 5px 10px;
+  }
+}

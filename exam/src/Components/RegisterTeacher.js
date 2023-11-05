@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 require("../Components/CSS/loginteacher.css");
 
 function RegisterTeacher() {
-  //state for saving id and password
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,7 +19,6 @@ function RegisterTeacher() {
   const [passwordsMatch, setPasswordsMatch] = useState(true);
   const [emailAlreadyRegistered, setEmailAlreadyRegistered] = useState(false);
 const navigate=useNavigate();
-  //function for sending data to server
   const fetchingData = async () => {
     setLoading(true);
     const response = await fetch("http://localhost:9000/api/signup", {
@@ -39,7 +37,6 @@ const navigate=useNavigate();
       console.log("User registered successfully", data);
       setLoading(false);
       navigate("/login-teachers");
-      // Show a success message to the user or navigate to a success page
     } else if (response.status === 400 && data.message === "Email already registered") {
       console.error("Email already registered", data);
       setEmailAlreadyRegistered(true);
@@ -51,7 +48,6 @@ const navigate=useNavigate();
   
   };
 
-  //handeling id input change
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -61,7 +57,6 @@ const navigate=useNavigate();
     }));
   };
 
-  //Handeling form data submission
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     setEmailAlreadyRegistered(false);
@@ -71,20 +66,17 @@ const navigate=useNavigate();
       setPasswordsMatch(false);
       
       setLoading(false);
-      return; // Do not submit the form
+      return; 
     }
 
-    // Passwords match, proceed with submission
     setPasswordsMatch(true);
 
     console.log(formData);
 
-    // calling the fetchingData function for sending data to server after clicking on submit button
     fetchingData();
     
     
 
-    // Resetting the input fields after submitting the form
     setFormData({ name: "", email: "", password: "", confirmPassword: "" });
   };
 
