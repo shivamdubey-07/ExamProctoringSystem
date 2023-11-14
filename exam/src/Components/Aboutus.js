@@ -1,10 +1,13 @@
 import React from "react";
 
+import Nav from "./Nav";
+
 require("../Components/CSS/about.css");
 
 function Aboutus() {
   return (
     <div>
+    <Nav/>
       <div className="about-us-container">
         <h1>About Us</h1>
         <p>

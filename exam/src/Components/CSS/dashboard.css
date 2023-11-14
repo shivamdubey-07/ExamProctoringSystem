@@ -26,37 +26,52 @@
   }
   
 
-  .login-button-students,.login-button-teacher {
-    display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  .login-button-students, .login-button-teacher {
+    display: block;
+    text-align: center;
+    width: 300px;
+    height: 60px;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
   }
+  
+  .login-button-students:hover, .login-button-teacher:hover {
+    background-color: #0056b3; /* Change the background color on hover */
+  }
+  
 
   .text-overlay {
+    text-align: center;
+    
     position: absolute;
-    top: 30%;
-   left:85%;
+    top: 50%;
+   left:30%;
    width: 30%;
-   margin: 2px;
+ 
     transform: translate(-50%, -50%);
    
     color: rgb(0, 0, 0);
     font-size: 30px;
     
-    
-    padding: 20px;
+   
     
   }
-  
   .text-overlay h2 {
-    margin-bottom: 10px;
+   color: black;
+    
+   
+    
   }
+ 
+
   
 
   @media (max-width: 768px) {

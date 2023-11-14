@@ -7,10 +7,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginTeacher from "./Components/LoginTeacher";
 import StudentLogin from "./Components/StudentLogin";
 import Aboutus from "./Components/Aboutus";
+import Contact from "./Components/Contact";
 import AdminDashboard from "./Components/AdminDashboard";
 import Result from "./Components/paper/Result";
 import QuestionPaper from "./Components/student/QuestionPaper";
 import StudentDashboard from "./Components/student/StudentDashboard";
+import StudentResult from "./Components/student/StudentResult";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route exact path="/about" element={<Aboutus />}></Route>
         <Route exact path="/results" element={<Result />}></Route>
         <Route exact path="/paper" element={<QuestionPaper />}></Route>
+        <Route exact path="/studentsResult" element={<StudentResult />}></Route>
+        <Route exact path="/contact" element={<Contact />}></Route>
         <Route
           exact
           path="/studentDashboard"

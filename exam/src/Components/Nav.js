@@ -9,7 +9,7 @@ function Nav() {
     
     <nav className="navbar navbar-expand-lg bg-dark fixed-top bg-body-tertiary"  data-bs-theme="dark">
     <div className="container-fluid">
-      <a className="navbar-brand" href="/">Navbar</a>
+      <a className="navbar-brand" href="/"> EPS </a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -18,21 +18,19 @@ function Nav() {
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="/">Home</a>
           </li>
-          <li className="nav-item">
-            <a className="nav-link " aria-current="page" href="/">Features</a>
-          </li>
+        
           <li className="nav-item">
             <a className="nav-link " aria-current="page" href="/about">About</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link " aria-current="page" href="/">Contact Us</a>
+            <a className="nav-link " aria-current="page" href="/contact">Contact Us</a>
           </li>
        
          
         </ul>
 
         <div className="login-button">
-        <Link to="/login-teachers" className="nav-btn">Login</Link>
+        <Link to="/login-teachers" className="nav-btn">Teacher Login</Link>
       </div>
      
       </div>

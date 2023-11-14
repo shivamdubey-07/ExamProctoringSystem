@@ -78,7 +78,6 @@ function QuestionPaper() {
         if (userAnswer == null) {
           console.log("null");
         } else {
-          console.log("jfksadjf//////////////////////////", userAnswer);
           const correctAnswer = q.correctAnswer;
           const isCorrect = userAnswer == correctAnswer;
 
@@ -135,6 +134,33 @@ function QuestionPaper() {
       },
     });
   };
+
+  // document.addEventListener('copy', (event) => {
+  //   event.preventDefault();
+  // });
+  
+  // document.addEventListener('cut', (event) => {
+  //   event.preventDefault();
+  // });
+  
+  // document.addEventListener('paste', (event) => {
+  //   event.preventDefault();
+  // });
+
+  // window.addEventListener('keydown', (event) => {
+  //   if (event.ctrlKey && (event.key === 'n' || event.key === 't' || event.key === 'r')) {
+  //     event.preventDefault();
+  //   }
+  // });
+
+  // window.addEventListener('contextmenu', (event) => {
+  //   event.preventDefault();
+  // });
+
+  // window.addEventListener('beforeunload', (event) => {
+  //   event.preventDefault();
+  //   event.returnValue = 'Are you sure you want to leave the exam?';
+  // });
 
   return (
     <div className="question-list">

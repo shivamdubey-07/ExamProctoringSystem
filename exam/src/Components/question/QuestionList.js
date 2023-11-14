@@ -3,6 +3,7 @@ import QuestionForm from "./QuestionForm";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import "../question/questionMake.css"
+import { Button } from "bootstrap";
 
 const QuestionList = () => {
   const [questions, setQuestions] = useState([]);
@@ -80,7 +81,29 @@ const QuestionList = () => {
 
   };
 
+  const handleNewPaper=async()=>{
 
+    try {
+      const response = await axios.delete("http://localhost:9000/api/createnewpaper", {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        withCredentials: true,
+      });
+      console.log("question list in",response.data)
+
+
+      
+      setQuestions([]);
+    
+     
+    } catch (error) {
+      console.error("Error fetching questions:", error);
+    }
+
+  
+  }
 
 
   const handleDeleteQuestion = (question) => {
@@ -111,6 +134,7 @@ const QuestionList = () => {
       {questions.map((quest, index) => (
         <div key={index + 1} className="question-item">
         <p>Questions:</p>
+        <button className=" btn btn-success btnNewPaper" onClick={handleNewPaper} >Create a new Paper</button>
         <p>Your Paper Code is {quest.code}<span style={{fontSize:"13px"}}>*Share it With Students</span></p>
           {quest.question.map((q, i) => (
             <div key={i + 1} className="question-text">

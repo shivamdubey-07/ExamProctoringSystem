@@ -27,13 +27,15 @@ const QuestionForm = ({ onSubmit }) => {
     setCorrectAnswer(null);
   };
 
+
+
   return (
     <div className="question-form-container">
     <h4>Question</h4>
     <input
       className="question-text-input"
       type="text"
-      placeholder="Question Text"
+      placeholder="Enter a question"
       value={text}
       onChange={(e) => setText(e.target.value)}
     />
@@ -51,11 +53,13 @@ const QuestionForm = ({ onSubmit }) => {
     <button className="add-option-button" onClick={addOption}>
       Add Option
     </button>
+    <h4 style={{paddingTop:"30px"}} >Select Correct Option</h4>
     <select
       className="correct-answer-select"
       value={correctAnswer}
       onChange={(e) => setCorrectAnswer(e.target.value)}
     >
+    <h3>Select Correct Option</h3>
       <option value={null}>Select Correct Option</option>
       {options.map((option, index) => (
         <option key={index} value={index}>
@@ -66,7 +70,10 @@ const QuestionForm = ({ onSubmit }) => {
     <button className="add-question-button" onClick={handleSave}>
       Add Question
     </button>
+
+    
   </div>
+  
   );
 };
 

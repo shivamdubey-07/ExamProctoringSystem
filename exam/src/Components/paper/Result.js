@@ -5,7 +5,7 @@ import { useEffect ,useState} from 'react';
 const ResultsPage = () => {
 
   const [results, setResults] = useState([]);
-  const [per, setPer] = useState([]);
+  const [per, setPer] = useState();
 
   useEffect(() => {
     async function fetchResults() {
@@ -32,10 +32,12 @@ const ResultsPage = () => {
 
     fetchResults();
 
-    const percentage=(results.correctAnswers/results.totalQuestions)*100;
+    const percentage=(results.correctAnswers/results.totalQuestions)*100; 
+    const per = percentage.toFixed(2);
     console.log(results)
-    setPer(percentage)
-  }, []);
+    console.log(percentage)
+    setPer(per)
+  }, );
 
   return (
     <div className='result-cards'>
