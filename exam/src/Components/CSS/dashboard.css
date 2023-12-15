@@ -40,11 +40,11 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease; 
   }
   
   .login-button-students:hover, .login-button-teacher:hover {
-    background-color: #0056b3; /* Change the background color on hover */
+    background-color: #0056b3; 
   }
   
 

@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import { useNavigate } from "react-router-dom";
+
 
 function StudentDashboard() {
   const navigate = useNavigate();
+ 
+
 
   const handleStartExamClick = () => {
-    navigate("/paper");
+   
+
+    setTimeout(() => {
+    navigate("/paper")},1000)
   };
 
   return (

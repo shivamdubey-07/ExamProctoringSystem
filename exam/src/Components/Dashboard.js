@@ -1,25 +1,21 @@
 import React from "react";
-import RegisterTeacher from "./RegisterTeacher";
 import { Link } from "react-router-dom";
 import img from "../utility/img.jpg";
 import Aboutus from "./Aboutus";
 import Typewriter from "typewriter-effect";
-import Nav from "./Nav"
+import Nav from "./Nav";
 import Contact from "./Contact";
 import Footer from "./Footer";
 
 require("../Components/CSS/dashboard.css");
 
 function Dashboard() {
-  const handleClick = () => {
-    <RegisterTeacher />;
-  };
+  
 
   return (
     <div className="landing-page">
+      <Nav />
 
-    <Nav/>
-    
       <div className="image-container">
         <img className="landing_img" src={img} alt="Landing img" />
 
@@ -37,22 +33,22 @@ function Dashboard() {
         </div>
 
         <div className="button-container">
-        <Link className="login-button-students" to="/login-students">
-        Login For Students
-      </Link>
+          <Link className="login-button-students" to="/login-students">
+            Login For Students
+          </Link>
           <Link className="login-button-teacher" to="/signup-teachers">
             Signup For Teachers
           </Link>
-         
+
           <Link className="login-button-students" to="/login-teachers">
             Login For teachers
           </Link>
         </div>
       </div>
-        
+
       <Aboutus />
-      <Contact/>
-      <Footer/>
+      <Contact />
+      <Footer />
     </div>
   );
 }

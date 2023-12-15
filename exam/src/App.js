@@ -1,8 +1,6 @@
 import React from "react";
 import Dashboard from "./Components/Dashboard";
-
 import RegisterTeacher from "./Components/RegisterTeacher";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginTeacher from "./Components/LoginTeacher";
 import StudentLogin from "./Components/StudentLogin";
@@ -36,7 +34,6 @@ function App() {
           path="/studentDashboard"
           element={<StudentDashboard />}
         ></Route>
-
         <Route
           exact
           path="/admin-dashboard"

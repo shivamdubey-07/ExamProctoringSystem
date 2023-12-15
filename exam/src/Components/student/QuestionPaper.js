@@ -9,6 +9,51 @@ import "./questionList.css";
 function QuestionPaper() {
   const [questions, setQuestions] = useState([]);
   const [userAnswers, setUserAnswers] = useState({});
+  const [timer, setTimer] = useState(3*60*60);
+  const [isTimerOver, setIsTimerOver] = useState(false);
+  useEffect(() => {
+    // Disable right-clicking
+    document.addEventListener('contextmenu', handleContextMenu);
+
+    // Disable copying and pasting
+    document.addEventListener('copy', handleCopy);
+    document.addEventListener('cut', handleCut);
+    document.addEventListener('paste', handlePaste);
+
+    // Additional step to prevent dragging and dropping if needed
+    document.addEventListener('dragstart', handleDragStart);
+
+    // Cleanup listeners on component unmount
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('copy', handleCopy);
+      document.removeEventListener('cut', handleCut);
+      document.removeEventListener('paste', handlePaste);
+      document.removeEventListener('dragstart', handleDragStart);
+    };
+  }, []);
+
+
+  const handleContextMenu = (e) => {
+    e.preventDefault();
+  };
+
+  const handleCopy = (e) => {
+    e.preventDefault();
+  };
+
+  const handleCut = (e) => {
+    e.preventDefault();
+  };
+
+  const handlePaste = (e) => {
+    e.preventDefault();
+  };
+
+  const handleDragStart = (e) => {
+    e.preventDefault();
+  };
+
 
 
   const [counts, setCounts] = useState({
@@ -20,6 +65,10 @@ function QuestionPaper() {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+
+
+
   useEffect(() => {
     axios
       .get("http://localhost:9000/api/showquestion", {
@@ -44,7 +93,38 @@ function QuestionPaper() {
       .catch((error) => {
         console.error("Error fetching questions:", error);
       });
+
+    
+
+
+
+      
   }, []);
+
+  useEffect(() => {
+    const countdown = setInterval(() => {
+      setTimer((prevTimer) => prevTimer - 1);
+    }, 1000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(countdown);
+  }, []);
+
+  useEffect(() => {
+    // Check if the timer has reached zero
+    if (timer === 0) {
+      setIsTimerOver(true);
+     checkAnswers()
+    }
+  }, [timer]);
+
+  const formatTime = (seconds) => {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+
+    return `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+  };
 
   const handleOptionSelect = (questionId, optionIndex) => {
     
@@ -135,36 +215,18 @@ function QuestionPaper() {
     });
   };
 
-  // document.addEventListener('copy', (event) => {
-  //   event.preventDefault();
-  // });
-  
-  // document.addEventListener('cut', (event) => {
-  //   event.preventDefault();
-  // });
-  
-  // document.addEventListener('paste', (event) => {
-  //   event.preventDefault();
-  // });
-
-  // window.addEventListener('keydown', (event) => {
-  //   if (event.ctrlKey && (event.key === 'n' || event.key === 't' || event.key === 'r')) {
-  //     event.preventDefault();
-  //   }
-  // });
-
-  // window.addEventListener('contextmenu', (event) => {
-  //   event.preventDefault();
-  // });
-
-  // window.addEventListener('beforeunload', (event) => {
-  //   event.preventDefault();
-  //   event.returnValue = 'Are you sure you want to leave the exam?';
-  // });
+ 
 
   return (
     <div className="question-list">
       <h2>Exam Questions</h2>
+      <div className={`timer-container ${isTimerOver ? 'timer-over' : ''}`}>
+      {isTimerOver ? (
+        <p>Submitting The Exam.</p>
+      ) : (
+        <p>Time remaining: {formatTime(timer)}</p>
+      )}
+    </div>
       {questions.map((quest, index) => (
         <div key={quest._id} className="question">
           {quest.question.map((q, i) => (
@@ -174,7 +236,7 @@ function QuestionPaper() {
               </p>
               {q.options.map((option, optIndex) => (
                 <div key={optIndex} className="option">
-                  <div>
+                  <div className="div_option">
                  
                     <input
                       type={option.multipleChoice ? "checkbox" : "radio"}
@@ -184,7 +246,7 @@ function QuestionPaper() {
                       onChange={() => handleOptionSelect(q._id, optIndex)}
                     />
 
-                    {option}
+                    <p>{option}</p> 
                     <br />
 
                     <br />
@@ -197,7 +259,7 @@ function QuestionPaper() {
           ))}
         </div>
       ))}
-      <button onClick={checkAnswers}>Check Answers</button>
+      <button onClick={checkAnswers}>Submit</button><span style={{ fontSize:"10px" }}>*Do not submit before compeletion</span>
     </div>
   );
 }

@@ -40,8 +40,10 @@ const ResultsPage = () => {
   }, );
 
   return (
+    <div className='box'>
+    <h1 className='centered-text'>Result</h1>
     <div className='result-cards'>
-      <h2>Results</h2>
+     
     
       <div className='card'>Total Questions: {results.totalQuestions}</div>
       <div className='card'>Total Right: {results.correctAnswers}</div>
@@ -49,6 +51,8 @@ const ResultsPage = () => {
       <div className='card'>Percentage: {per}%</div>
      
      
+    </div>
+
     </div>
   );
 };
