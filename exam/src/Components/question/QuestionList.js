@@ -21,25 +21,15 @@ const QuestionList = () => {
         withCredentials: true,
       });
       console.log("question list in",response.data)
-
-
-      
       setQuestions(response.data);
-    
-     
     } catch (error) {
       console.error("Error fetching questions:", error);
     }
   }
-
   useEffect(() => {
-
-    
-   
-
     fetchQuestions();
     console.log("fjffa",questions)
-  });
+  },[]);
 
   const handleSaveQuestion = (question) => {
     console.log("handle save ",question)
@@ -70,8 +60,11 @@ const QuestionList = () => {
         })
         .then((data) => {
           console.log(".....................", questions);
+          console.log("data is",data);
           
-          setQuestions([...questions, data]);
+          setQuestions([data]);
+          console.log("after setting", questions);
+
         })
         .catch((error) => {
           console.error("Fetch error:", error.message);
