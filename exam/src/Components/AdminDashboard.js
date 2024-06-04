@@ -16,27 +16,20 @@ function AdminDashboard() {
     const callPage = async () => {
       try {
 
-        const res = await axios.post(
-          "https://exam-backend-0p6v.onrender.com/api/admin-dashboard",
-          {}, // Assuming no data payload is needed, otherwise replace with the actual data object
-          {
-              withCredentials: true,
-              headers: {
-                  Accept: "application/json",
-                  "Content-Type": "application/json",
-              },
-          }
-      );
+        const res = await fetch("https://exam-backend-0p6v.onrender.com/api/admin-dashboard", {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        });
+         
+          
+    
 
 
-        // const res = await fetch("https://exam-backend-0p6v.onrender.com/api/admin-dashboard", {
-        //   method: "GET",
-        //   headers: {
-        //     Accept: "application/json",
-        //     "Content-Type": "application/json",
-        //   },
-        //   credentials: "include",
-        // });
+     
 
         const data = await res.json();
         console.log("data here",data)
