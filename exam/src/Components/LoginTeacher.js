@@ -73,7 +73,7 @@ function LoginTeacher() {
     <div className="login_page">
       <div className="container-reg">
         <div className="container-form">
-          <h2>Sign In</h2>
+          <h2>Log In</h2>
           <p>As an Examiner/Instiution</p>
 
           {failed && (
