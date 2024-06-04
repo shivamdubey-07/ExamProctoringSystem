@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import SideBar from "./SideBar";
+import axios from "axios";
 
 import { setuserData } from "../Features/Slices/userDataSlice";
 import QuestionList from "./question/QuestionList";
@@ -14,14 +15,28 @@ function AdminDashboard() {
   useEffect(() => {
     const callPage = async () => {
       try {
-        const res = await fetch("https://exam-backend-0p6v.onrender.com/api/admin-dashboard", {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        });
+
+        const res = await axios.post(
+          "https://exam-backend-0p6v.onrender.com/api/admin-dashboard",
+         
+          {
+            withCredentials: true,
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+
+        // const res = await fetch("https://exam-backend-0p6v.onrender.com/api/admin-dashboard", {
+        //   method: "GET",
+        //   headers: {
+        //     Accept: "application/json",
+        //     "Content-Type": "application/json",
+        //   },
+        //   credentials: "include",
+        // });
 
         const data = await res.json();
         console.log("data here",data)
