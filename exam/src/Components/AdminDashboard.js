@@ -18,15 +18,15 @@ function AdminDashboard() {
 
         const res = await axios.post(
           "https://exam-backend-0p6v.onrender.com/api/admin-dashboard",
-         
+          {}, // Assuming no data payload is needed, otherwise replace with the actual data object
           {
-            withCredentials: true,
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-            },
+              withCredentials: true,
+              headers: {
+                  Accept: "application/json",
+                  "Content-Type": "application/json",
+              },
           }
-        );
+      );
 
 
         // const res = await fetch("https://exam-backend-0p6v.onrender.com/api/admin-dashboard", {
