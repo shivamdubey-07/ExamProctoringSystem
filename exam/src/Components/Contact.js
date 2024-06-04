@@ -22,7 +22,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:9000/api/send-email", {
+      const response = await fetch("https://exam-backend-0p6v.onrender.com/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

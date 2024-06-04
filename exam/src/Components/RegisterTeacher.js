@@ -21,7 +21,7 @@ function RegisterTeacher() {
 const navigate=useNavigate();
   const fetchingData = async () => {
     setLoading(true);
-    const response = await fetch("http://localhost:9000/api/signup", {
+    const response = await fetch("https://exam-backend-0p6v.onrender.com/api/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

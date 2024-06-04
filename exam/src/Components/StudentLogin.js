@@ -22,7 +22,7 @@ function StudentLogin() {
     event.preventDefault();
 
     try{
-      const response = await fetch("http://localhost:9000/api/studentLogin", {
+      const response = await fetch("https://exam-backend-0p6v.onrender.com/api/studentLogin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

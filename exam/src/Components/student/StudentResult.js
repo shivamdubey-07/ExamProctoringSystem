@@ -55,7 +55,7 @@ function StudentResult() {
       
     }
     axios
-      .get(`http://localhost:9000/api/studentsResults/${paperCode}`, {
+      .get(`https://exam-backend-0p6v.onrender.com/api/studentsResults/${paperCode}`, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",

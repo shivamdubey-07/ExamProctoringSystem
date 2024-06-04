@@ -10,7 +10,7 @@ const ResultsPage = () => {
   useEffect(() => {
     async function fetchResults() {
       try {
-        const response = await fetch('http://localhost:9000/api/result', {
+        const response = await fetch('https://exam-backend-0p6v.onrender.com/api/result', {
           method: 'GET',
           headers: {
             "Content-Type": "application/json",

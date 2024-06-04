@@ -13,7 +13,7 @@ const QuestionList = () => {
   const myData = useSelector((state) => state.userData);
   const fetchQuestions = async () => {
     try {
-      const response = await axios.get("http://localhost:9000/api/showquestionlist", {
+      const response = await axios.get("https://exam-backend-0p6v.onrender.com/api/showquestionlist", {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const QuestionList = () => {
     {
 
       console.log("is it being called now");
-      const apiUrl = "http://localhost:9000/api/addquestion";
+      const apiUrl = "https://exam-backend-0p6v.onrender.com/api/addquestion";
 
 
       console.log("is it being called nowq2");
@@ -84,7 +84,7 @@ const QuestionList = () => {
   const handleNewPaper=async()=>{
 
     try {
-      const response = await axios.delete("http://localhost:9000/api/createnewpaper", {
+      const response = await axios.delete("https://exam-backend-0p6v.onrender.com/api/createnewpaper", {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
@@ -109,7 +109,7 @@ const QuestionList = () => {
   const handleDeleteQuestion = (question) => {
     console.log("deleting quesiton is",question)
     axios
-      .delete(`http://localhost:9000/api/deletequestion/${question._id}`, {
+      .delete(`https://exam-backend-0p6v.onrender.com/api/deletequestion/${question._id}`, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",

@@ -71,7 +71,7 @@ function QuestionPaper() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:9000/api/showquestion", {
+      .get("https://exam-backend-0p6v.onrender.com/api/showquestion", {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
@@ -181,7 +181,7 @@ function QuestionPaper() {
   
 
     try {
-      await fetch("http://localhost:9000/api/result", {
+      await fetch("https://exam-backend-0p6v.onrender.com/api/result", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

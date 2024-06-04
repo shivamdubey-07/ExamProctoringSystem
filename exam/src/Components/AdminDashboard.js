@@ -14,7 +14,7 @@ function AdminDashboard() {
   useEffect(() => {
     const callPage = async () => {
       try {
-        const res = await fetch("http://localhost:9000/api/admin-dashboard", {
+        const res = await fetch("https://exam-backend-0p6v.onrender.com/api/admin-dashboard", {
           method: "GET",
           headers: {
             Accept: "application/json",
